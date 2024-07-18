@@ -1,9 +1,11 @@
 import Image from "next/image";
+import { Header } from "./_components/Header";
 
 export default function Home() {
   return (
       <main>
-        <h1>Home</h1>
+          {/*  Header */}
+          <Header />
       </main>
   );
 }
