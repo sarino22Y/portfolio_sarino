@@ -21,6 +21,7 @@ const config = {
       sans: ["var(--font-geist-sans)"],
       mono: ["var(--font-geist-mono)"],
       caption: ["var(--font-caption)"],
+      kalam: ["var(--font-kalam)"],
     },
     extend: {
       colors: {
