@@ -33,7 +33,7 @@ export const Hero = () => {
         </h2>
         <h3 className="text-3xl font-caption bg-sky-800/40 max-w-72 text-lime-600/100 font-bold pt-2 px-2 hover:bg-accent/30 hover:text-primary transition-colors">Software developer</h3>
         <p className="leading-8 text-start text-base">
-          I love programming languages and technologies. I am a software <br />
+          I love programming languages and technologies. I am a software <br className="max-md:hidden" />
           engineer with a passion for
           <Code className="inline-flex items-center gap-1"><JavaIcon size={16} />Java</Code>,
           <Code className="inline-flex items-center gap-1"><ReactIcon size={16} />React</Code>,
