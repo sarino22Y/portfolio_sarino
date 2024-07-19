@@ -10,7 +10,7 @@ export const Header = () => {
   return (
     <header className="sticky top-0 py-4">
       <Section className="flex items-baseline">
-        <h1 className="text-2xl font-bold text-primary">Sarino MN.</h1>
+        <h1 className="text-2xl font-kalam font-bold text-primary"><Link href="/">Sarino.mn</Link></h1>
         <div className="flex-1" />
         <ul className="flex items-center gap-2">
           <Link
