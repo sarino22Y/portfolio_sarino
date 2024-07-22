@@ -27,7 +27,7 @@ const Code = ({ className, ...props }: ComponentPropsWithoutRef<"span">) => {
 export const Hero = () => {
   return (
     <Section className="flex items-start max-md:flex-col gap-4">
-      <div className="flex-[2] flex flex-col gap-2">
+      <div className="flex-[3] flex flex-col gap-2">
         <h2 className="font-caption text-5xl text-primary font-bold">
           Hi, I&apos;m Sarino Malalanirina
         </h2>
@@ -54,11 +54,11 @@ export const Hero = () => {
           <Link href="https://drive.google.com/file/d/1TCNQ74arIKH-MV-5ihEoK0LDeAG_7yAT/view?usp=sharing" className={cn(buttonVariants({ variant: "default" }), "flex w-40 ms-4 font-bold text-gray-50 bg-sky-700 border border-gray-50")}>RESUME <Download size={16} className="mx-3" /> </Link>
         </div>
       </div>
-      <div className="flex-1 hover:animate-pulse m-auto max-md:m-auto ml-auto">
+      <div className="flex-[2] hover:animate-pulse m-auto max-md:m-auto ml-auto">
         <img
           src="https://avatars.githubusercontent.com/u/74770148?s=400&u=b6196c99dd3232c5c7c14fdb0fd320f0df648941&v=4"
           alt="Sarino Malalanirina"
-          className="w-full h-auto max-w-xs rounded-3xl max-md:w-56"
+          className="w-full h-auto md:max-w-xs rounded-3xl max-md:w-full"
         />
       </div>
     </Section>
