@@ -50,8 +50,8 @@ export const Hero = () => {
 
         <div className="flex">
           <Spacing />
-          <Button className="w-40 font-bold text-gray-50 bg-violet-900/50 border border-sky-700">READ MORE</Button>
-          <Link href="https://drive.google.com/file/d/1TCNQ74arIKH-MV-5ihEoK0LDeAG_7yAT/view?usp=sharing" className={cn(buttonVariants({ variant: "default" }), "flex w-40 ms-4 font-bold text-gray-50 bg-sky-700 border border-gray-50")}>RESUME <Download size={16} className="mx-3" /> </Link>
+          <Button className={cn(buttonVariants({ variant: "outline" }), "flex w-40 text-primary hover:bg-gray-50/10 hover:animate-pulse")}>READ MORE</Button>
+          <Link href="https://drive.google.com/file/d/1TCNQ74arIKH-MV-5ihEoK0LDeAG_7yAT/view?usp=sharing" className={cn(buttonVariants({ variant: "default" }), "flex w-40 ms-4 font-bold text-gray-50 bg-sky-800/40 border border-gray-50/20 hover:bg-sky-800/40 hover:border-accent hover:animate-pulse")}>RESUME <Download size={16} className="mx-3" /> </Link>
         </div>
       </div>
       <div className="flex-[2] hover:animate-pulse m-auto max-md:m-auto ml-auto">

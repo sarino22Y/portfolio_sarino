@@ -41,7 +41,7 @@ export const Status = () => {
                     </div>
                 </Card>
                 <Card className="p-4 flex-1 flex flex-col gap-2">
-                    <p className="text-lg text-muted-foreground">CONTACTS </p>
+                    <p className="text-lg text-muted-foreground">CONTACT-ME </p>
                     <ContactCard 
                         name="Sarino Malalanirina"
                         image="https://media.licdn.com/dms/image/C4D03AQE0XGj4gqK51A/profile-displayphoto-shrink_400_400/0/1648042571655?e=1727308800&v=beta&t=l_PhVPhkpfHAzCt-6QumsykVT92wMZPYZO7qTyl9SMw"
