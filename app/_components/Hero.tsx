@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import { ComponentPropsWithoutRef } from "react";
 import { Section } from "./Section";
 import { cn } from "@/lib/utils";
 import { JavaIcon } from "./icons/JavaIcon";
@@ -11,18 +10,7 @@ import { Button, buttonVariants } from "@/components/ui/button";
 import { Download } from "lucide-react";
 import Link from "next/link";
 import { Spacing } from "./Spacing";
-
-const Code = ({ className, ...props }: ComponentPropsWithoutRef<"span">) => {
-  return (
-    <span
-      className={cn(
-        "bg-accent/30 font-mono border border-accent px-1 text-primary rounded-sm mx-1 text-nowrap hover:bg-accent/50 transition-colors ",
-        className
-      )}
-      {...props}
-    />
-  );
-};
+import { Code } from "./Code";
 
 export const Hero = () => {
   return (
