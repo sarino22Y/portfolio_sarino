@@ -7,6 +7,9 @@ import { title } from "process";
 import Image, { ImageLoaderProps } from "next/image";
 import { LogoImage } from "./icons/LogoImage";
 import { Badge } from "@/components/ui/badge";
+import { SideProject, SideProjectProps } from "./SideProject";
+import { ContactCard } from "./ContactCard";
+import { Work, WorkProps } from "./Work";
 
 export const Status = () => {
     return (
@@ -42,7 +45,7 @@ export const Status = () => {
                 </Card>
                 <Card className="p-4 flex-1 flex flex-col gap-2">
                     <p className="text-lg text-muted-foreground">CONTACT-ME </p>
-                    <ContactCard 
+                    <ContactCard
                         name="Sarino Malalanirina"
                         image="https://media.licdn.com/dms/image/C4D03AQE0XGj4gqK51A/profile-displayphoto-shrink_400_400/0/1648042571655?e=1727308800&v=beta&t=l_PhVPhkpfHAzCt-6QumsykVT92wMZPYZO7qTyl9SMw"
                         mediumImage="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/600px-LinkedIn_logo_initials.png"
@@ -92,44 +95,6 @@ const SIDE_PROJECTS: SideProjectProps[] = [
     },
 ];
 
-type SideProjectProps = {
-    Logo: LucideIcon | string;
-    title: string;
-    description: string;
-    url: string;
-    isImage: boolean;
-};
-
-const SideProject = (props: SideProjectProps) => {
-    return (
-        <Link
-            href={props.url}
-            className="inline-flex items-center gap-4 hover:bg-accent/50 transition-colors p-1 rounded"
-        >
-            <span className="bg-accent text-accent-foreground p-3 rounded-sm">
-                {props.isImage ? (
-                    <>
-                        {
-                            <LogoImage
-                                Image={props.Logo as string}
-                                title={props.title}
-                                width={24}
-                                height={24}
-                            />
-                        }
-                    </>
-                ) : (
-                    <props.Logo size={16} />
-                )}
-            </span>
-            <div>
-                <p className="text-lg font-semibold">{props.title}</p>
-                <p className="text-sm text-muted-foreground">{props.description}</p>
-            </div>
-        </Link>
-    );
-};
-
 const WORKS: WorkProps[] = [
     {
         Image:
@@ -156,67 +121,3 @@ const WORKS: WorkProps[] = [
         url: "/",
     },
 ];
-
-type WorkProps = {
-    Image: string;
-    title: string;
-    role: string;
-    date: string;
-    url: string;
-};
-
-const Work = (props: WorkProps) => {
-    return (
-        <Link
-            href={props.url}
-            className="inline-flex items-center gap-4 hover:bg-accent/50 transition-colors p-1 rounded"
-        >
-            <img
-                src={props.Image}
-                alt={props.title}
-                className="w-10 h-10 object-contain rounded-md"
-            />
-            <div className="mr-auto">
-                <div>
-                    <p className="text-lg font-semibold">{props.title}</p>
-                    { /*<Badge variant="outline" className="">Badge</Badge> */}
-                </div>
-                <p className="text-xs text-muted-foreground">{props.role}</p>
-            </div>
-            <p className="text-xs text-end text-accent-foreground/50 text-nowrap">{props.date}</p>
-        </Link>
-    );
-};
-
-type ContactProps = {
-    image: string;
-    mediumImage: string;
-    name: string;
-    description: string;
-};
-
-const ContactCard = (props: ContactProps) => {
-    return (
-        <Card className="p-3 bg-accent/10 hover:bg-accent/30 transition-colors flex items-center gap-4 group">
-            <div className="relative">
-                <img 
-                src={props.image}
-                alt={props.name}
-                className="w-10 h-10 rounded-full object-contain"
-                />
-                <img
-                    src={props.mediumImage} 
-                    alt={props.name}
-                    className="w-4 h-4 absolute -bottom-1 -right-1"
-                />
-            </div>
-            <div className="mr-auto">
-                <div className="flex items-center gap-2">
-                    <p className="text-lg font-semibold">{props.name}</p>
-                </div>
-                <p className="text-xs text-muted-foreground">{props.description}</p>
-            </div>
-            <ArrowUpRight size={16} className="mr-4 group-hover:translate-x-2 group-hover:-translate-y-2 transition-transform" />
-        </Card>
-    );
-};

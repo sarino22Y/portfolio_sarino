@@ -14,12 +14,12 @@ export const Skills = () => {
         I love work on ...
       </h2>
       <div className="flex max-md:flex-col gap-4">
-        <div className="flex flex-col gap-2">
+        <div className="flex-1 flex flex-col gap-2">
           <ReactIcon
             size={42}
             className="animate-spin hover:animate-none"
             style={{
-              animationDuration: "10s",
+              animationDuration: "10s",              
             }}
           />
           <h3 className="text-2xl font-semibold tracking-tight">React</h3>
@@ -29,7 +29,7 @@ export const Skills = () => {
           </p>
         </div>
 
-        <div className="flex flex-col gap-2">
+        <div className="flex-1 flex flex-col gap-2">
           <TailwindnIcon
             size={42}
             className="animate-pulse hover:animate-none"
@@ -39,11 +39,11 @@ export const Skills = () => {
           />
           <h3 className="text-2xl font-semibold tracking-tight">Tailwind</h3>
           <p className="text-sm text-muted-foreground">
-            I can create a <u>beautiful</u> application <i>in seconds</i> using  <Code>TailwindCSS</Code>.
+            I can create a <u>beautiful</u> application using <Code>TailwindCSS</Code>.
           </p>
         </div>
 
-        <div className="flex flex-col gap-2">
+        <div className="flex-1 flex flex-col gap-2">
           <JavaIcon
             size={42}
             className=""
